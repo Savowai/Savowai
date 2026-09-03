@@ -30,6 +30,7 @@ TypeScript · Next.js · React · Node · Tailwind · Claude API · Airtable · 
 
 ### Also
 
-Completed *AI Fluency for Small Businesses* (Anthropic & PayPal).
+Completed [*AI Fluency for Small Businesses*](ai-fluency-for-small-businesses-anthropic-paypal.pdf)
+(Anthropic & PayPal).
 
 Reach me at **asebjunior@gmail.com**.
