@@ -17,7 +17,7 @@ The hard part wasn't calling an LLM — it was deciding what happens when one fa
 generations are rejected rather than saved, because a half-built page sent to a real business is
 worse than no page at all.
 
-**[xr-football](https://github.com/adamsebhat/xr-football)** —
+**[xr-football](https://github.com/Savowai/xr-football)** —
 ([live](https://xrphilosophy.vercel.app)) Premier League analytics. A Python pipeline pulls 380
 fixtures from the ESPN API, computes exponentially weighted form and matchup-aware xG, and outputs
 Poisson scorelines, W/D/L probabilities, and expected points. Automated data refresh via GitHub
