@@ -16,11 +16,13 @@ crime. Negative binomial models with a road-mile offset, Moran's I and a spatial
 clustering, block-group robustness checks. Python, GeoPandas, DuckDB, statsmodels; the site is
 Next.js with DuckDB-WASM and a 42-document retrieval layer running entirely in the browser.
 
-The two counties produced opposite signs, so the result that replicated is the retailer one: Home
-Depot and Lowe's carry roughly five times the odds of a nearby camera they don't operate, versus
-matched big-box retailers. Several explanations fit it and the data doesn't separate them, which
-the report says plainly. The camera data is crowdsourced and incomplete, and that constraint leads
-the write-up rather than sitting in a footnote.
+In King County the concentration is real: tracts with larger Hispanic/Latino populations hold
+about 30% more cameras per road-mile, and roads, population, income and crime don't account for
+it. The five biggest deployments are all among the county's most Hispanic cities — Seattle has
+754k residents and 23 cameras, Renton has 102k and 63. LA County runs the other way, which I
+report rather than explain away. The result that replicated in both: Home Depot and Lowe's carry
+roughly five times the odds of a nearby camera they don't operate, versus matched big-box
+retailers. Camera data is crowdsourced and incomplete, and that constraint leads the write-up.
 
 **[savowai-app](https://github.com/Savowai/savowai-app)** — an approval-gated AI operations
 platform. Four role-based agents coordinate lead discovery, business research, outreach prep, and
