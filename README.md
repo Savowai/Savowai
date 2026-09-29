@@ -10,19 +10,20 @@ engagements. Open to engineering roles. Los Angeles, CA.
 
 **[flock-demographics-analysis](https://github.com/Savowai/flock-demographics-analysis)** —
 ([live](https://flock-demographics-analysis.vercel.app)) does surveillance camera placement track
-neighbourhood demographics? 3,025 Flock license plate readers mapped against census tracts in LA
-County and King County, controlling for arterial road density, population, income and reported
-crime. Negative binomial models with a road-mile offset, Moran's I and a spatial lag model for the
-clustering, block-group robustness checks. Python, GeoPandas, DuckDB, statsmodels; the site is
-Next.js with DuckDB-WASM and a 42-document retrieval layer running entirely in the browser.
+neighbourhood demographics? An end-to-end geospatial study of 3,025 Flock license plate readers
+across LA County and King County, from collection through statistics to a deployed site.
 
-In King County the concentration is real: tracts with larger Hispanic/Latino populations hold
-about 30% more cameras per road-mile, and roads, population, income and crime don't account for
-it. The five biggest deployments are all among the county's most Hispanic cities — Seattle has
-754k residents and 23 cameras, Renton has 102k and 63. LA County runs the other way, which I
-report rather than explain away. The result that replicated in both: Home Depot and Lowe's carry
-roughly five times the odds of a nearby camera they don't operate, versus matched big-box
-retailers. Camera data is crowdsourced and incomplete, and that constraint leads the write-up.
+Nine Python collection scripts — Census ACS, TIGER/Line, OpenStreetMap via Overpass, LAPD and
+Seattle PD crime portals — feeding GeoPandas spatial joins reprojected to state plane before any
+measurement, with road lines split at tract boundaries so mileage is attributed correctly.
+Negative binomial models in statsmodels with a road-mile offset, dispersion estimated through a
+Poisson auxiliary regression when full MLE wouldn't converge, Moran's I and a spatial lag model
+for the residual clustering, block-group robustness checks.
+
+The site is Next.js and TypeScript with everything running client-side: DuckDB-WASM queries the
+analysis table from Parquet, and the 42-document retrieval layer embeds your question with
+Transformers.js and scores it against int8-quantised passage vectors (1,125 × 384 dims in 432 KB),
+since ChromaDB and PyTorch don't run on Vercel. No API keys, no server, no runtime cost.
 
 **[savowai-app](https://github.com/Savowai/savowai-app)** — an approval-gated AI operations
 platform. Four role-based agents coordinate lead discovery, business research, outreach prep, and
