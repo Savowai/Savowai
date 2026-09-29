@@ -20,10 +20,17 @@ Negative binomial models in statsmodels with a road-mile offset, dispersion esti
 Poisson auxiliary regression when full MLE wouldn't converge, Moran's I and a spatial lag model
 for the residual clustering, block-group robustness checks.
 
-The site is Next.js and TypeScript with everything running client-side: DuckDB-WASM queries the
-analysis table from Parquet, and the 42-document retrieval layer embeds your question with
-Transformers.js and scores it against int8-quantised passage vectors (1,125 × 384 dims in 432 KB),
-since ChromaDB and PyTorch don't run on Vercel. No API keys, no server, no runtime cost.
+A RAG pipeline covers the policy record alongside the statistics: 42 statutes, agency policies and
+audits downloaded in full, chunked on paragraph boundaries with overlap into 1,125 passages,
+embedded locally with sentence-transformers (all-MiniLM-L6-v2) and indexed in ChromaDB. Queries
+answer only from retrieved passages and cite the source file, or say the corpus doesn't cover the
+question rather than guessing.
+
+The site is Next.js and TypeScript with everything running client-side. DuckDB-WASM queries the
+analysis table from Parquet, and the RAG layer ships without a server at all: passage vectors are
+precomputed, L2-normalised and int8-quantised (1,125 × 384 dims in 432 KB), and Transformers.js
+embeds the question in-browser so retrieval is a dot product over a typed array — ChromaDB and
+PyTorch don't run on Vercel. No API keys, no server, no runtime cost.
 
 **[savowai-app](https://github.com/Savowai/savowai-app)** — an approval-gated AI operations
 platform. Four role-based agents coordinate lead discovery, business research, outreach prep, and
