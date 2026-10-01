@@ -7,6 +7,7 @@ Currently doing applied AI and automation work through my own practice, plus fre
 engagements. Open to engineering roles. Los Angeles, CA.
 
 **Portfolio:** [adamsebhatportfolio.vercel.app](https://adamsebhatportfolio.vercel.app) ·
+**LinkedIn:** [linkedin.com/in/asebjunior](https://www.linkedin.com/in/asebjunior) ·
 **Email:** asebjunior@gmail.com
 
 ### Selected work
