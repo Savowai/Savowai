@@ -6,6 +6,9 @@ mostly Next.js and TypeScript, with Claude doing the parts that used to need a p
 Currently doing applied AI and automation work through my own practice, plus freelance
 engagements. Open to engineering roles. Los Angeles, CA.
 
+**Portfolio:** [adamsebhatportfolio.vercel.app](https://adamsebhatportfolio.vercel.app) ·
+**Email:** asebjunior@gmail.com
+
 ### Selected work
 
 **[flock-demographics-analysis](https://github.com/Savowai/flock-demographics-analysis)** —
@@ -79,6 +82,3 @@ Airtable · Firebase · Vercel · GitHub Actions · scikit-learn
 - [Claude with the Anthropic API](claude-with-the-anthropic-api-anthropic.pdf) — Anthropic (Aug 2026)
 - [Teaching the AI Fluency Framework](teaching-the-ai-fluency-framework-anthropic.pdf) — Anthropic (Sep 2026)
 - [AI Fluency for Small Businesses](ai-fluency-for-small-businesses-anthropic-paypal.pdf) — Anthropic & PayPal (Aug 2026)
-
-**Portfolio:** [adamsebhatportfolio.vercel.app](https://adamsebhatportfolio.vercel.app) ·
-**Email:** asebjunior@gmail.com
