@@ -22,6 +22,14 @@ answering only from retrieved passages with the source cited. The Next.js site r
 the browser (DuckDB-WASM for the data, Transformers.js over int8-quantised vectors for search), so
 it needs no server or API key.
 
+**[ask-the-ref](https://github.com/Savowai/ask-the-ref)** —
+([live](https://ask-the-ref-liart.vercel.app/)) evidence-first search over the current IFAB Laws of
+the Game. The official PDF is parsed into 348 structure-aware sections (Laws, subsections,
+definitions, protocols, page references). Retrieval is hybrid RAG on PostgreSQL + pgvector: full-text
+search plus local MiniLM embeddings, reranked with a cross-encoder, with football slang expansion and
+off-topic refusal. A local Ollama pipeline generates answers with fail-closed citation validation;
+the public Next.js app on Vercel uses deterministic quote-only search, so it needs no model API key.
+
 **[savowai-app](https://github.com/Savowai/savowai-app)** — an approval-gated AI operations
 platform. Four role-based agents coordinate lead discovery, business research, outreach prep, and
 site builds across a 10-stage workflow, with a human reviewing every stage before anything
